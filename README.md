@@ -5,8 +5,8 @@ My blog is currently under construction, so please wear a hardhat while you're h
 # seandavidthompson.io
 
 ---
-title: "Sean's Blog"
-theme: jekyll-theme-cayman
+title:"Sean's Blog"
+theme:jekyll-theme-cayman
 ---
 
 My Ideas
