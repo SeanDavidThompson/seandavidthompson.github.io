@@ -6,7 +6,7 @@ My blog is currently under construction, so please wear a hardhat while you're h
 
 ---
 title:"Sean's Blog"
-theme:jekyll-theme-cayman
+theme:jekyll-theme-midnight
 ---
 
 My Ideas
