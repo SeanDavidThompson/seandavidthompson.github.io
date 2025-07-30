@@ -1,0 +1,2 @@
+# seandavidthompson.io
+My Ideas
