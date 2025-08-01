@@ -1,5 +1,5 @@
 ---
-theme: jekyll-theme-midnight
+
 title: Sean's homepage
 description: Bookmark this to keep an eye on my project updates!
 
