@@ -5,7 +5,7 @@ permalink: /about/
 image: '/images/01-2.jpg'
 ---
 
-Hey, I’m Alex - part developer, part digital explorer, and full-time lover of all things tech. From crafting lines of code on Linux to unraveling the layers of cybersecurity, my passion for technology goes beyond just a career.
+Hey, I’m Sean - part economist, part data analyst, and full-time lover of all things data. From crafting lines of code on Rstudio to unraveling the layers of forecasting, my passion for data goes beyond just a career.
 
 {: .note }
 Even the most experienced developers don't know everything
