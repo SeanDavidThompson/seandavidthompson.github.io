@@ -1,5 +1,5 @@
-.Rproj.user
-.Rhistory
-.RData
-.Ruserdata
-index.html
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+.DS_Store
