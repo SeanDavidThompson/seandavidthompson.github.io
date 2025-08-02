@@ -5,6 +5,10 @@ image: '/images/01.jpg'
 
 {% include hero.html %}
 
+{% for post in site.posts %}
+- [{{ post.title }}]({{ post.url }})
+{% endfor %}
+
 {% include logos.html %}
 
 {% include section-blog.html %}
