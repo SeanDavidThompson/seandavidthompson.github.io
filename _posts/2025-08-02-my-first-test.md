@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Exploring My Data"
+author: "Sean Thompson"
 date: 2025-08-02 14:00:00 -0000
 tags: [data, tutorial, analysis]
 ---
