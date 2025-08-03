@@ -23,6 +23,11 @@ defaults:
       path: '_pages'
     values:
       permalink: /:basename:output_ext
+  - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      author: "New Name"
 
 
 include:
