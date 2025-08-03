@@ -2,9 +2,9 @@
 # General Site Settings
 title: Sean's Data Blog
 description: Sean's Notes on Data
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/blog" # the subpath of your site, e.g. /blog
 url: "https://seandavidthompson.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-
+author: Sean David Thompson
 
 #-------------------------------
 # Build Settings
