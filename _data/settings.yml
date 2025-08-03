@@ -1,7 +1,7 @@
 #-------------------------------
 # Site Settings
-title: Coderon
-description: Coderon is a super modern and unique Jekyll blog theme
+title: Sean's Data Website
+description: Sean's Notes
 logo: # You can add own logo. For example '/images/logo.png'.
 logo_dark:
 
@@ -42,7 +42,7 @@ menu_settings:
 #-------------------------------
 # Author Settings
 author:
-  author_name: Alex Dias
+  author_name: Sean Thompson
   author_avatar: /images/01-1.jpg
 
 
@@ -51,8 +51,8 @@ author:
 hero:
   enable: true
   hero_avatar: /images/01-1.jpg
-  hero_title: Hi! I’m Alex 👋
-  hero_subtitle: A digital explorer, coder, and Linux advocate
+  hero_title: Hi! I’m Sean 👋
+  hero_subtitle: A digital explorer, coder, and forecaster
   hero_description: |
     I’m a digital explorer, coder, and Linux advocate. This blog is my personal knowledge base on productivity, programming, and the freedom of information.
 
@@ -167,7 +167,7 @@ social:
 #-------------------------------
 # Contact Settings
 contact:
-  form_id: your@email.com # Add your form_id
+  form_id: seandavidthompson@gmail.com # Add your form_id
   button_text: Send Now
 
 # NOTE
