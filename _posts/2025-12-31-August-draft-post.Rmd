@@ -1,6 +1,11 @@
 ---
-title: "August post"
-author: "Sean Thompson"
+layout: post
+title: "Exploring My Data"
+author:
+  name: "Sean Thompson"
+  url: "/about/"
+date: 2025-08-02 14:00:00 -0000
+tags: [data, tutorial, analysis]
 ---
 Every quarter, the City of Seattle’s Office of Economic and Revenue Forecasts releases updated projections of city revenues to inform budget planning and policy decisions. As part of my job, last week, I had the opportunity to contribute to the development of the August revenue and economic forecasts, with my domain being the private utility tax revenues. Specifically, I created forecasts for Natural Gas, Steam, Waste, Cable and Telephone revenues for the next 6 years.
 
@@ -180,4 +185,5 @@ ggplot(data = forecast_df, aes(x = date, y = revenue, color = scenario)) +
        x = "Date", y = "Revenue ($, millions)",
        caption = "Source: Office of Economic and Revenue Forecasts") +
   theme_minimal()
+
   ```
