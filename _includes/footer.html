@@ -10,18 +10,20 @@
           {% if site.data.settings.footer_description %}
           <p class="footer__info__description">{{ site.data.settings.footer_description }}</p>
           {% endif %}
-          {% if site.data.settings.social %}
-          <div class="footer__social">
-            <ul class="footer__social__list list-reset">
-              {% for social in site.data.settings.social %}
-              <li class="footer__social__item">
-                <a class="footer__social__link" href="{{ social.link }}" target="_blank" rel="noopener"
-                  aria-label="{{ social.name }} link"><i class="{{ social.icon }}"></i></a>
-              </li>
-              {% endfor %}
-            </ul>
-          </div>
-          {% endif %}
+<div class="footer__social">
+  <ul class="footer__social__list list-reset">
+    <li class="footer__social__item">
+      <a class="footer__social__link"
+         href="https://github.com/SeanDavidThompson"
+         target="_blank"
+         rel="noopener"
+         aria-label="GitHub link">
+        <i class="fa-brands fa-github"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
         </div>
 
         <div class="col col-4 col-d-12">
