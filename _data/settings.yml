@@ -10,7 +10,7 @@ logo_dark:
 #-------------------------------
 # Color Scheme Settings
 color_scheme:
-  default: dark # Default theme applied on the first visit (options: "light" or "dark")
+  default: light # Default theme applied on the first visit (options: "light" or "dark")
   toggle: true # Enable theme toggle
 
 # Enables or disables the theme toggle functionality:
@@ -63,7 +63,7 @@ hero:
 
 # Logos
 logos:
-  enable: true
+  enable: false
   logos_title: Nerd Stuff
   logo_image:
     - alt: "Game Boy"
@@ -82,13 +82,11 @@ logos:
 # Section Blog Settings
 blog:
   enable: true
-  blog_title: The Binary Journal
-
-
-#-------------------------------
+  blog_title: The Residuals
+  #-------------------------------
 # Tags Section Settings
 tags_section:
-  enable: true
+  enable: false
   tags_section_title: Hacker’s Haven
   tags:
     - tag: "Programming"
@@ -104,14 +102,14 @@ tags_section:
 #-------------------------------
 # Videos Section Settings
 videos_section:
-  enable: true
+  enable: false
   videos_section_title: Latest Videos
 
 
 #-------------------------------
 # Gallery Section Settings
 gallery_section:
-  enable: true
+  enable: false
   gallery_section_title: Byte Frame
   gallery:
     gallery_images:
