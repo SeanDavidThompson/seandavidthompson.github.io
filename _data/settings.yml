@@ -122,7 +122,7 @@ gallery_section:
         url: '/images/101.jpg'
         caption: 'A peaceful moment captured during a serene evening.'
       - alt: 'Hobby'
-        url: '/images/102.jpg'
+        url: '/images/102.jpg' 
         caption: 'True friends are like stars — they shine brightest when the world feels dark.'
       - alt: 'Computers'
         url: '/images/103.jpg'
