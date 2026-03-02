@@ -53,7 +53,7 @@ hero:
   enable: true
   hero_avatar: /images/01-1.jpg
   hero_title: Hi! I’m Sean
-  hero_subtitle: Primary Directive: Predict the future
+  hero_subtitle: "Primary Directive: Predict the future"
   hero_description: |
     I'm a economist for a municipal forecasting office, focusing on economic and revenue forecasts. I use R, EViews, and fancy data visualisations to relay complex modeling insights to key decision makers. 
   hero_image_caption: My creative work
