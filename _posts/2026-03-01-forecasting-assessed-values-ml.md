@@ -3,7 +3,6 @@ layout: post
 title: "Forecasting Seattle Property Assessed Values with LightGBM"
 author:
   name: "Sean Thompson"
-  url: "/about/"
 date: 2026-03-01
 tags: [machine learning, LightGBM, R, forecasting, property tax, panel data]
 ---
