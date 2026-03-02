@@ -6,24 +6,25 @@ description: "How the City of Seattle uses parcel-level ML models to forecast pr
 tags: [machine learning, property tax, forecasting, Seattle]
 ---
 
-Property tax is one of the most important and predictable revenue streams for local governments — but "predictable" doesn't mean easy to forecast. Assessed values (AV) are set annually by the King County Assessor, and even modest surprises in that number can ripple through a city's budget. The goal of this project is to get ahead of those surprises using machine learning.
+Property tax is one of the most important and predictable revenue streams for local governments, however "predictable" doesn't mean easy to forecast. Assessed values (AV) are set annually by the King County Assessor, and even modest surprises in that number can ripple through a city's budget. The goal of this project is to get ahead of those surprises using machine learning.
 
 ## Why Forecast Assessed Values?
 
-The City of Seattle receives a share of property tax revenue based on total assessed values within city limits. Budget and revenue planning teams need forward-looking estimates of AV well before the Assessor publishes official numbers — sometimes a year or more in advance. That gap is where forecasting earns its keep.
+The City of Seattle receives a share of property tax revenue based on total assessed values within city limits. Budget and revenue planning teams need estimates of the next 6 years of AV well before the Assessor publishes official numbers. That gap is where forecasting earns its keep.
 
 The challenge is that assessed value is determined parcel by parcel, aggregated across hundreds of thousands of properties spanning single-family homes, commercial towers, and everything in between. A single macro-level forecast isn't granular enough to capture how different property types behave differently across market cycles.
 
 ## The Data
 
-The model works at the **parcel level**, using historical assessed value records from the King County Assessor combined with Seattle housing market data from the NWMLS. Features include:
+The model works at the **parcel level**, using historical assessed value records from the King County Assessor combined with Seattle housing and commercial market data from the NWMLS and CoStar. Features include:
 
 - Prior-year assessed values and year-over-year change rates
+- Distances to schools and public transit stops
 - Building type classifications (mapped from King County Assessor area codes), distinguishing residential, commercial, industrial, and mixed-use parcels
 - Market-level signals such as median sale prices and inventory trends
 - Temporal features capturing seasonality and cyclical patterns in the housing market
 
-The parcel-level granularity matters. Commercial office properties, for instance, have behaved very differently from residential parcels in the post-COVID period — a distinction that a single aggregate model would smooth over.
+The parcel-level granularity matters. Commercial office properties, for instance, have behaved very differently from residential parcels in the post-COVID period but a distinction that a single aggregate model would smooth over.
 
 ## The Modeling Approach
 
