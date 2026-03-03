@@ -3,3 +3,9 @@
   post_url: "https://theresiduals.io/forecasting-assessed-values-ml"
   github_url: ""
   tags: [machine learning, LightGBM, R, forecasting, property tax, panel data]
+
+- title: "Forecasting Seattle's Housing Market with Econometrics"
+  description: "How do you build a credible multi-year forecast for a metropolitan housing market that went through a once-in-a-generation structural shock?"
+  post_url: "https://theresiduals.io/forecasting-seattle-housing-nwmls"
+  github_url: ""
+  tags: [econometrics, housing, forecasting, Seattle, ARDL, VECM]
