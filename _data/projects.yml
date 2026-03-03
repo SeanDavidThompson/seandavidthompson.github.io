@@ -2,4 +2,4 @@
   description: "A parcel-level ML pipeline for forecasting Seattle property assessed values, built to support city budget and revenue planning."
   post_url: "https://theresiduals.io/forecasting-assessed-values-ml"
   github_url: ""
-  tags: [machine learning, property tax, forecasting, R]
+  tags: [machine learning, LightGBM, R, forecasting, property tax, panel data]
