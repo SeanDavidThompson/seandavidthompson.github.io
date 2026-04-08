@@ -28,7 +28,7 @@ These ten parcels represent roughly $2.8B in combined TY2026 appraised AV. At th
 The interactive chart below lets you toggle individual buildings on and off. Try isolating just the legacy towers (built before 2000) versus the post-2015 construction---the patterns are remarkably parallel, just on different timelines.
 
 <!-- Embed your ggplotly widget here -->
-<iframe src="/assets/widgets/major_office_av_top10_widget.html" width="100%" height="225" frameborder="0" style="border: none;"></iframe>
+<iframe src="/assets/widgets/major_office_av_top10_widget.html" width="100%" height="100" frameborder="0" style="border: none;"></iframe>
 
 ---
 
