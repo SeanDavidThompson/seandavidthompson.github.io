@@ -2,7 +2,7 @@
 layout: page
 title: About Me
 permalink: /about/
-image: '/images/IMG_4993.mp4'
+image: '/images/40.jpg'
 ---
 
 I'm Sean Thompson, an economist with the City of Seattle's Office of Economic and Revenue Forecasts. My work is building the production models that forecast the revenue streams the city budgets against — property taxes, private utility taxes, and related sources. *The residuals* is where I write about that work in public, and about forecasting and applied econometrics more broadly.
