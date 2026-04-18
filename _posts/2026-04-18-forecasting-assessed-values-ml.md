@@ -90,6 +90,8 @@ Condos get modeled separately from single-family homes. The parcel universe is s
 
 The feature importance profile between residential and condo is a useful contrast. For residential, parcel characteristics dominate total gain (55.6%), with economic (22.5%) and sales/market (21.9%) features playing smaller but still substantial roles. The top individual feature is the first lag of log improvements AV, followed by housing permits growth and log land AV. For condos, the mix is much more balanced: sales/market features actually lead (37.9%), then parcel (33.9%), then economic (28.2%). The single most important condo feature is the first lag of services employment YoY growth, followed by NWMLS median price and the year-over-year change in active listings.
 
+![Seattle Residential and Condo Feature Importance, Improvements Growth](/assets/img/feature_importance_res_condo_impr_delta.png)
+*Source: OERF ML Model.*
 ### Commercial track
 
 The commercial track went a different direction. I initially built a parcel-level ML commercial panel, but the output had a 134% aggregate growth rate anomaly that couldn't be reconciled with any plausible trajectory. The root cause is the income-capitalization issue above: cap rates and net operating income are the primary signals the Assessor actually uses, and the ML panel didn't have direct access to either.
@@ -180,7 +182,7 @@ A few things have held up across this iteration:
 *Historical (solid) and forecast (dashed). Shaded areas = optimistic/pessimistic range. Source: KC Assessor, CoStar, S&P Global, OERF.*
 ![Seattle Forecast of SFH Median Value](/assets/img/median_av_sfh_clean.png)
 *Historical (solid) and forecast (dashed). Source: KC Assessor, CoStar, S&P Global, OERF.*
-![Seattle Residential and Condo Feature Importance, Improvements Growth](/assets/img/feature_importance_res_condo_impr_delta.png)
+
 
 ## Next Steps
 
