@@ -22,13 +22,6 @@ This one is a check-in after the April 2026 forecast cycle, with three major cha
 ![Seattle AV Forecast by Property Type](/assets/img/av_certified_faceted.png)
 *Historical (solid) and forecast (dashed), separate scales. Shaded areas = optimistic/pessimistic range. Source: KC Assessor, CoStar, S&P Global, OERF.*
 
-## Roadmap
-
-- Where we left off: residential retrofitting with LightGBM
-- What's new: macro conditioning, three property-type tracks, sequential forecasting with scenarios
-- Key results and validation against the certified AV base
-- Lessons learned and next steps
-
 ## Recap: The Residential Prototype
 
 The starting point was a LightGBM parcel-level model for residential property (prop_type R, roughly 179K parcels), trained on King County Assessor panel data from 2006 to 2026. Features were parcel characteristics: square footage, lot size, year built, location, view score, and so on. The model produces point-in-time AV predictions per parcel, which aggregate up to citywide totals.
@@ -166,6 +159,13 @@ Some context for where the $306B base is coming from and how composition has shi
 
 The residential rise and the office collapse are the two headline shifts. Residential grew 36.9% in dollars and picked up nearly five percentage points of share. Office lost a quarter of its AV outright and gave up 4.4 points of share — this is the story covered in a separate post on Seattle's biggest office buildings losing half their AV in three years. Industrial and medical are the quiet growth stories, each up more than 60% in dollars, though from smaller bases.
 
+![Seattle AV Forecast by Property Type](/assets/img/av_certified_faceted.png)
+*Historical (solid) and forecast (dashed), separate scales. Shaded areas = optimistic/pessimistic range. Source: KC Assessor, CoStar, S&P Global, OERF.*
+![Seattle AV Forecast by Property Type](/assets/img/av_certified_by_type.png)
+*Historical (solid) and forecast (dashed). Shaded areas = optimistic/pessimistic range. Source: KC Assessor, CoStar, S&P Global, OERF.*
+![Seattle Forecast of SFH Median Value](/assets/img/median_av_sfh_clean.png)
+*Historical (solid) and forecast (dashed). Source: KC Assessor, CoStar, S&P Global, OERF.*
+
 ## Lessons Learned
 
 A few things have held up across this iteration:
@@ -175,14 +175,6 @@ A few things have held up across this iteration:
 **Data engineering was at least half the work.** Parcel ID format mismatches (dashes vs. no dashes causing empty training joins), data.table and tidyselect type conflicts, vintage accuracy in the retrofitted panel, memory management during chunked prediction — these ate more time than model tuning did. None of it is visible in the output, but all of it had to be right for the output to mean anything.
 
 **Anchoring matters more than raw model accuracy.** Reconciling to the certified $306B base before projecting forward is what makes the forecast defensible to stakeholders. A model that's accurate in log space but drifts from the known certified level is less useful than one that's anchored and then applies plausible growth rates.
-
-![Seattle AV Forecast by Property Type](/assets/img/av_certified_faceted.png)
-*Historical (solid) and forecast (dashed), separate scales. Shaded areas = optimistic/pessimistic range. Source: KC Assessor, CoStar, S&P Global, OERF.*
-![Seattle AV Forecast by Property Type](/assets/img/av_certified_by_type.png)
-*Historical (solid) and forecast (dashed). Shaded areas = optimistic/pessimistic range. Source: KC Assessor, CoStar, S&P Global, OERF.*
-![Seattle Forecast of SFH Median Value](/assets/img/median_av_sfh_clean.png)
-*Historical (solid) and forecast (dashed). Source: KC Assessor, CoStar, S&P Global, OERF.*
-
 
 ## Next Steps
 
