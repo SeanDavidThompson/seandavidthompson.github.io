@@ -21,11 +21,11 @@ The municipal revenue forecasting world is small and most of its work is interna
 
 ## Credentials
 
-I hold two NABE certifications: the Certificate in Time-Series Analysis and Forecasting (2025) and the Certificate in Machine Learning and Data Science for Economists (2025).
+I hold two NABE certifications: the Certificate in Time-Series Analysis and Forecasting (2025) and the Certificate in Machine Learning and Data Science for Economists (2025). I've graduated from the University of Washington, with a Bachelor of Science in Economics with departmental honors. 
 
 {: .note }
 Views here are my own and not the City of Seattle's.
 
 ## Elsewhere
 
-The easiest way to reach me is the [contact page](/contact/) or LinkedIn. Outside of work I volunteer as a delivery driver at the University District Food Bank and do a lot of bouldering.
+The easiest way to reach me is the [contact page](/contact/) or [LinkedIn](https://www.linkedin.com/in/sean-thompson-6b6030162/). Outside of work I volunteer as a delivery driver at the University District Food Bank and do a lot of bouldering.
