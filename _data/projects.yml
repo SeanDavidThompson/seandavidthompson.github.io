@@ -1,7 +1,7 @@
 - title: "Forecasting Seattle Property Assessed Values with LightGBM"
   description: "A parcel-level LightGBM pipeline for forecasting Seattle property assessed values, built to support city budget and revenue planning."
   post_url: "https://theresiduals.io/forecasting-assessed-values-ml"
-  github_url: ""
+  github_url: "https://github.com/SeanDavidThompson/Seattle-AV-ML-Forecast"
   tags: [machine learning, LightGBM, R, forecasting, property tax, panel data]
 
 - title: "Forecasting Seattle's Housing Market with Econometrics"
