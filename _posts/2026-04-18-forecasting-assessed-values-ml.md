@@ -189,4 +189,4 @@ Beyond that, the near-term roadmap is to fold income-side features (cap rates, N
 *Source: OERF ML Model, WIP.*
 ---
 
-*The code for this pipeline is being prepared for public release. If you're working on similar problems in municipal finance or property tax forecasting, feel free to reach out.*
+*The code for this pipeline is here[https://github.com/SeanDavidThompson/Seattle-AV-ML-Forecast]. If you're working on similar problems in municipal finance or property tax forecasting, feel free to reach out.*
