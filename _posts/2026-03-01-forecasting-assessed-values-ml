@@ -17,7 +17,10 @@ excerpt: "An updated tour of the parcel-level AV forecasting pipeline at the Cit
 
 Property tax revenue is one of the most stable and significant funding streams for municipal governments, but "stable" doesn't mean easy to predict. Assessed values fluctuate with the housing market, shift dramatically after reappraisal cycles, and interact in complex ways with macroeconomic conditions. At the City of Seattle's Office of Economic and Revenue Forecasts (OERF), I've been building a parcel-level machine learning pipeline to forecast assessed values (AV) through 2031, replacing a simpler aggregate-extrapolation approach with a system that learns from the full cross-sectional and temporal structure of the tax roll.
 
-An earlier post covered the residential prototype. This one is a check-in after the April 2026 forecast cycle, with three major changes worth documenting: macroeconomic and housing-market conditioning, a three-track architecture covering Residential, Condo, and Commercial separately, and a sequential year-by-year forecast run under baseline, optimistic, and pessimistic scenarios. Everything is anchored to the $306B certified AV base for tax year 2026.
+This one is a check-in after the April 2026 forecast cycle, with three major changes worth documenting: macroeconomic and housing-market conditioning, a three-track architecture covering Residential, Condo, and Commercial separately, and a sequential year-by-year forecast run under baseline, optimistic, and pessimistic scenarios. Everything is anchored to the $306B certified AV base for tax year 2026.
+
+![Seattle AV Forecast by Property Type](/assets/img/av_certified_faceted.png)
+*Historical (solid) and forecast (dashed), separate scales. Shaded areas = optimistic/pessimistic range. Source: KC Assessor, CoStar, S&P Global, OERF.*
 
 ## Roadmap
 
@@ -171,12 +174,22 @@ A few things have held up across this iteration:
 
 **Anchoring matters more than raw model accuracy.** Reconciling to the certified $306B base before projecting forward is what makes the forecast defensible to stakeholders. A model that's accurate in log space but drifts from the known certified level is less useful than one that's anchored and then applies plausible growth rates.
 
+![Seattle AV Forecast by Property Type](/assets/img/av_certified_faceted.png)
+*Historical (solid) and forecast (dashed), separate scales. Shaded areas = optimistic/pessimistic range. Source: KC Assessor, CoStar, S&P Global, OERF.*
+![Seattle AV Forecast by Property Type](/assets/img/av_certified_by_type.png)
+*Historical (solid) and forecast (dashed). Shaded areas = optimistic/pessimistic range. Source: KC Assessor, CoStar, S&P Global, OERF.*
+![Seattle Forecast of SFH Median Value](/assets/img/median_av_sfh_clean.png)
+*Historical (solid) and forecast (dashed). Source: KC Assessor, CoStar, S&P Global, OERF.*
+![Seattle Residential and Condo Feature Importance, Improvements Growth](/assets/img/feature_importance_res_condo_impr_delta.png)
+
 ## Next Steps
 
 The main item on the roadmap is refining the commercial approach. Rather than a single pooled commercial model, the plan is separate ML models for separate commercial groups — Major Office, Apartment, Industrial, and so on — each with subgroup-specific features. The feature-importance diagnostics already show that the right features differ substantially across subgroups (Hospitality is macro-dominated, Major Office is building-characteristic-dominated, Medical leans on housing permits and home price indices), which is a strong signal that subgroup models will outperform a pooled one.
 
 Beyond that, the near-term roadmap is to fold income-side features (cap rates, NOI proxies from CoStar) into the commercial ML panel, which should address the 134% growth anomaly directly rather than working around it. And further out, the sequential scenario framework is a natural fit for richer scenario analysis tied to OERF's broader regional model.
 
+![Seattle Commercial Subgroups Feature Importance, Improvment Growth](/assets/img/feature_importance_subgroups_impr_delta.png)
+*Historical (solid) and forecast (dashed), separate scales. Shaded areas = optimistic/pessimistic range. Source: KC Assessor, CoStar, S&P Global, OERF.*
 ---
 
 *The code for this pipeline is being prepared for public release. If you're working on similar problems in municipal finance or property tax forecasting, feel free to reach out.*
