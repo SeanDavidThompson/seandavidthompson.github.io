@@ -98,6 +98,9 @@ That said, the exploratory ML work on commercial produced useful feature-importa
 
 The forecast is not a single forward pass to 2031. It's a sequential simulation where each year's predictions become features for the next year.
 
+![Seattle AV Forecast by Property Type](/assets/img/av_certified_by_type.png)
+*Historical (solid) and forecast (dashed). Shaded areas = optimistic/pessimistic range. Source: KC Assessor, CoStar, S&P Global, OERF.*
+
 The loop is:
 
 1. Train the model on the historical panel, 2006 through 2025 observed AVs.
@@ -162,8 +165,7 @@ The residential rise and the office collapse are the two headline shifts. Reside
 
 ![Seattle AV Forecast by Property Type](/assets/img/av_certified_faceted.png)
 *Historical (solid) and forecast (dashed), separate scales. Shaded areas = optimistic/pessimistic range. Source: KC Assessor, CoStar, S&P Global, OERF.*
-![Seattle AV Forecast by Property Type](/assets/img/av_certified_by_type.png)
-*Historical (solid) and forecast (dashed). Shaded areas = optimistic/pessimistic range. Source: KC Assessor, CoStar, S&P Global, OERF.*
+
 ![Seattle Forecast of SFH Median Value](/assets/img/median_av_sfh_clean.png)
 *Historical (solid) and forecast (dashed). Source: KC Assessor, CoStar, S&P Global, OERF.*
 
@@ -181,12 +183,12 @@ A few things have held up across this iteration:
 
 The main item on the roadmap is refining the commercial approach. Rather than a single pooled commercial model, the plan is separate ML models for separate commercial groups — Major Office, Apartment, Industrial, and so on — each with subgroup-specific features. The feature-importance diagnostics already show that the right features differ substantially across subgroups (Hospitality is macro-dominated, Major Office is building-characteristic-dominated, Medical leans on housing permits and home price indices), which is a strong signal that subgroup models will outperform a pooled one.
 
-Beyond that, the near-term roadmap is to fold income-side features (cap rates, NOI proxies from CoStar) into the commercial ML panel, which should address the 134% growth anomaly directly rather than working around it. And further out, the sequential scenario framework is a natural fit for richer scenario analysis tied to OERF's broader regional model.
-
 ![Seattle AV by Property Group](/assets/img/av_detail_hist_land_impr_faceted.png)
 
 ![Seattle AV Share, 2019 vs 2026](/assets/img/av_detail_hist_share_faceted.png)
 *Source: King County Assessors*
+
+Beyond that, the near-term roadmap is to fold income-side features (cap rates, NOI proxies from CoStar) into the commercial ML panel, which should address the 134% growth anomaly directly rather than working around it. And further out, the sequential scenario framework is a natural fit for richer scenario analysis tied to OERF's broader regional model.
 
 ![Seattle Commercial Subgroups Feature Importance, Improvment Growth](/assets/img/feature_importance_subgroups_impr_delta.png)
 *Source: OERF ML Model, WIP.*
