@@ -184,7 +184,6 @@ The main item on the roadmap is refining the commercial approach. Rather than a 
 Beyond that, the near-term roadmap is to fold income-side features (cap rates, NOI proxies from CoStar) into the commercial ML panel, which should address the 134% growth anomaly directly rather than working around it. And further out, the sequential scenario framework is a natural fit for richer scenario analysis tied to OERF's broader regional model.
 ![Seattle AV by Property Group](/assets/img/av_av_detail_land_impr_facted.png)
 
-
 ![Seattle AV Share, 2019 vs 2026](/assets/img/av_detail_hist_share_faceted.png)
 *Source: King County Assessors*
 
