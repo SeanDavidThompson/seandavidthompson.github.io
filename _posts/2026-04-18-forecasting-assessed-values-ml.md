@@ -191,7 +191,8 @@ The main item on the roadmap is refining the commercial approach. Rather than a 
 Beyond that, the near-term roadmap is to fold income-side features (cap rates, NOI proxies from CoStar) into the commercial ML panel, which should address the 134% growth anomaly directly rather than working around it. And further out, the sequential scenario framework is a natural fit for richer scenario analysis tied to OERF's broader regional model.
 
 ![Seattle Commercial Subgroups Feature Importance, Improvment Growth](/assets/img/feature_importance_subgroups_impr_delta.png)
-*Source: OERF ML Model, WIP.*
+
+*Source: King County Assessors*
 ---
 
 *The code for this pipeline is [here](https://github.com/SeanDavidThompson/Seattle-AV-ML-Forecast). If you're working on similar problems in municipal finance or property tax forecasting, feel free to reach out.*
