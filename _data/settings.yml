@@ -30,9 +30,8 @@ menu_settings:
       url: '/projects/'
     - title: 'Archive'
       url: '/archive/'
-    - title: 'Pages'
-    - url: '/about/'
-      title: 'About'
+    - title: 'About'
+      url: '/about/'
     - url: '/contact/'
       title: 'Contact'
     #  submenu:
