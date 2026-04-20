@@ -36,8 +36,8 @@ menu_settings:
         title: 'About'
       - url: '/contact/'
         title: 'Contact'
-      - url: '/elements/'
-        title: 'Elements'
+    #  - url: '/elements/'
+    #    title: 'Elements'
 
 
 #-------------------------------
