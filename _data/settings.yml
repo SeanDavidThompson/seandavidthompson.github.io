@@ -32,8 +32,8 @@ menu_settings:
       url: '/archive/'
     - title: 'About'
       url: '/about/'
-    - url: '/contact/'
-      title: 'Contact'
+    - title: 'Contact' 
+      url: '/contact/'
     #  submenu:
     #  - url: '/about/'
     #    title: 'About'
