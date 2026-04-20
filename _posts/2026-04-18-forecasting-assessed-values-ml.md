@@ -169,7 +169,7 @@ The residential rise and the office collapse are the two headline shifts. Reside
 ![Seattle AV Forecast by Property Type](/assets/img/av_certified_faceted.png)
 *Historical (solid) and forecast (dashed), separate scales. Shaded areas = optimistic/pessimistic range. Source: KC Assessor, CoStar, S&P Global, OERF.*
 
-![Seattle AV Forecast Growth by Property Type](/assets/img/av_certified_yoy.png)
+![Seattle AV Forecast Growth by Property Type](/assets/img/av_certified_yoy_faceted.png)
 *Historical (solid) and forecast (dashed), separate scales. Shaded areas = optimistic/pessimistic range. Source: KC Assessor, CoStar, S&P Global, OERF.*
 
 ![Seattle Forecast of SFH Median Value](/assets/img/median_av_sfh_clean.png)
