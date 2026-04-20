@@ -92,6 +92,9 @@ The commercial track went a different direction. I initially built a parcel-leve
 
 Rather than force it, the decision was to bypass ML for commercial in this forecast cycle and fall back to the prior model that applies growth rates sourced from CoStar. The commercial forecast is broken out into seven groups: Apartment, Major Office, Industrial, Hospitality, Medical, Retail, and Other, each with its own growth assumption anchored in the CoStar feed.
 
+![Seattle Commercial Subgroups Feature Importance, Improvment Growth](/assets/img/feature_importance_subgroups_impr_delta.png)
+*Source: OERF ML Model, WIP.*
+
 That said, the exploratory ML work on commercial produced useful feature-importance diagnostics by subgroup. For Apartment, the first lag of services employment growth, first lag of employment levels, and several CoStar supply-side indicators (apartment construction starts, apartment demand units, median cap rate) rank near the top. For Major Office, building characteristics (year built, story height, net-to-gross ratio) dominate, with employment levels as the leading macro. Hospitality is the most macro-sensitive of the commercial subgroups — employment YoY growth is by far the single most important feature. Medical is also heavily macro-driven, with housing permits, CPI, and Case-Shiller all in the top five. That profile is what motivates the next-step plan to build separate ML models per commercial group rather than a single pooled commercial model.
 
 ## Sequential Year-by-Year Forecast
@@ -190,8 +193,7 @@ The main item on the roadmap is refining the commercial approach. Rather than a 
 
 Beyond that, the near-term roadmap is to fold income-side features (cap rates, NOI proxies from CoStar) into the commercial ML panel, which should address the 134% growth anomaly directly rather than working around it. And further out, the sequential scenario framework is a natural fit for richer scenario analysis tied to OERF's broader regional model.
 
-![Seattle Commercial Subgroups Feature Importance, Improvment Growth](/assets/img/feature_importance_subgroups_impr_delta.png)
-*Source: OERF ML Model, WIP.*
+
 ---
 
 *The code for this pipeline is [here](https://github.com/SeanDavidThompson/Seattle-AV-ML-Forecast). If you're working on similar problems in municipal finance or property tax forecasting, feel free to reach out.*
