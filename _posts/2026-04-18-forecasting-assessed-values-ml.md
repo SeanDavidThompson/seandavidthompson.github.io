@@ -75,7 +75,7 @@ The extended panel looks like this:
 
 The single biggest structural change is that the pipeline now runs three separate tracks: Residential, Condo, and Commercial. Each track has its own model training, its own feature engineering, and its own forecast logic.
 
-The rationale is that the Assessor uses genuinely different valuation methodologies for these property types. Residential and condo valuations lean heavily on comparable sales, which is a pattern ML learns well from parcel-level panel data. Commercial properties, especially investment-grade ones, are predominantly assessed via income capitalization — cap rates applied to net operating income. That's a different data-generating process, and forcing it through a single model gives up information in both directions.
+The rationale is that the Assessor uses genuinely different valuation methodologies for these property types. Residential and condo valuations lean heavily on comparable sales, which is a pattern ML learns well from parcel-level panel data. Commercial properties, especially investment-grade ones, are predominantly assessed via income capitalization and cap rates applied to net operating income. That's a different data-generating process, and forcing it through a single model gives up information in both directions.
 
 ### Condo track
 
@@ -95,7 +95,7 @@ Rather than force it, the decision was to bypass ML for commercial in this forec
 ![Seattle Commercial Subgroups Feature Importance, Improvment Growth](/assets/img/feature_importance_subgroups_impr_delta.png)
 *Source: OERF ML Model, WIP.*
 
-That said, the exploratory ML work on commercial produced useful feature-importance diagnostics by subgroup. For Apartment, the first lag of services employment growth, first lag of employment levels, and several CoStar supply-side indicators (apartment construction starts, apartment demand units, median cap rate) rank near the top. For Major Office, building characteristics (year built, story height, net-to-gross ratio) dominate, with employment levels as the leading macro. Hospitality is the most macro-sensitive of the commercial subgroups — employment YoY growth is by far the single most important feature. Medical is also heavily macro-driven, with housing permits, CPI, and Case-Shiller all in the top five. That profile is what motivates the next-step plan to build separate ML models per commercial group rather than a single pooled commercial model.
+That said, the exploratory ML work on commercial produced useful feature-importance diagnostics by subgroup. For Apartment, the first lag of services employment growth, first lag of employment levels, and several CoStar supply-side indicators (apartment construction starts, apartment demand units, median cap rate) rank near the top. For Major Office, building characteristics (year built, story height, net-to-gross ratio) dominate, with employment levels as the leading macro. Hospitality is the most macro-sensitive of the commercial subgroups, employment YoY growth is by far the single most important feature. Medical is also heavily macro-driven, with housing permits, CPI, and Case-Shiller all in the top five. That profile is what motivates the next-step plan to build separate ML models per commercial group rather than a single pooled commercial model.
 
 ## Sequential Year-by-Year Forecast
 
@@ -112,7 +112,7 @@ The loop is:
 4. Repeat year by year through 2031.
 5. Output: `panel_tbl_2006_2031_forecast_{scenario}_{track}.rds`.
 
-This structure captures path dependency. A parcel that appreciates in 2026 starts from a higher base in 2027, and a parcel that undershoots doesn't automatically snap back. The sequential approach also lets mean-reverting dynamics emerge naturally — parcels with anomalously large predicted jumps in one year tend to revert partially the next, consistent with how the Assessor's smoothing behaves in practice.
+This structure captures path dependency. A parcel that appreciates in 2026 starts from a higher base in 2027, and a parcel that undershoots doesn't automatically snap back. The sequential approach also lets mean-reverting dynamics emerge naturally - parcels with anomalously large predicted jumps in one year tend to revert partially the next, consistent with how the Assessor's smoothing behaves in practice.
 
 The same loop runs three times per track, once for each scenario (baseline, optimistic, pessimistic), with different macro and NWMLS input vectors.
 
@@ -130,7 +130,7 @@ Schematically, the forecasted panel fills in one year at a time:
 
 All forecasts are anchored to the $306B certified AV for tax year 2026. A reconciliation step ensures that parcel-level predictions for the base year sum to the known certified totals by property type before projecting forward. Growth rates from 2026 onward are applied to the certified base, which keeps the forecast grounded in the Assessor's official starting point rather than drifting based on ML-estimated 2026 levels.
 
-New construction AV is handled separately, using levy worksheet history back to 2007 rather than the ML panel. That's partly a data issue (the retrofitted panel isn't the right source for NC) and partly a concept issue — NC is additive on top of the existing roll and deserves its own treatment.
+New construction AV is handled separately, using levy worksheet history back to 2007 rather than the ML panel. That's partly a data issue (the retrofitted panel isn't the right source for NC) and partly a concept issue. NC is additive on top of the existing roll and deserves its own treatment.
 
 ## Results Summary
 
@@ -164,7 +164,7 @@ Some context for where the $306B base is coming from and how composition has shi
 | Other        | 9.2       | 11.1      | 21.1%    | 3.7%       | 3.6%       | –0.1 pp |
 | **Total**    | **244.5** | **306.5** | **25.4%**|            |            |         |
 
-The residential rise and the office collapse are the two headline shifts. Residential grew 36.9% in dollars and picked up nearly five percentage points of share. Office lost a quarter of its AV outright and gave up 4.4 points of share — this is the story covered in a separate post on Seattle's biggest office buildings losing half their AV in three years. Industrial and medical are the quiet growth stories, each up more than 60% in dollars, though from smaller bases.
+The residential rise and the office collapse are the two headline shifts. Residential grew 36.9% in dollars and picked up nearly five percentage points of share. Office lost a quarter of its AV outright and gave up 4.4 points of share - This is the story covered in a separate post on Seattle's biggest office buildings losing half their AV in three years. Industrial and medical are the quiet growth stories, each up more than 60% in dollars, though from smaller bases.
 
 ![Seattle AV Forecast by Property Type](/assets/img/av_certified_faceted.png)
 *Historical (solid) and forecast (dashed), separate scales. Shaded areas = optimistic/pessimistic range. Source: KC Assessor, CoStar, S&P Global, OERF.*
@@ -184,7 +184,7 @@ A few things have held up across this iteration:
 
 ## Next Steps
 
-The main item on the roadmap is refining the commercial approach. Rather than a single pooled commercial model, the plan is separate ML models for separate commercial groups — Major Office, Apartment, Industrial, and so on — each with subgroup-specific features. The feature-importance diagnostics already show that the right features differ substantially across subgroups (Hospitality is macro-dominated, Major Office is building-characteristic-dominated, Medical leans on housing permits and home price indices), which is a strong signal that subgroup models will outperform a pooled one.
+The main item on the roadmap is refining the commercial approach. Rather than a single pooled commercial model, the plan is separate ML models for separate commercial groups (Major Office, Apartment, Industrial, etc.), each with subgroup-specific features. The feature-importance diagnostics already show that the right features differ substantially across subgroups (Hospitality is macro-dominated, Major Office is building-characteristic-dominated, Medical leans on housing permits and home price indices), which is a strong signal that subgroup models will outperform a pooled one.
 
 ![Seattle AV by Property Group](/assets/img/av_detail_hist_land_impr_faceted.png)
 
