@@ -89,7 +89,7 @@ The simple aggregation — average post-treatment ATT — is **+11.8% (95% CI:
 1.0 km robustness ring. Both significant. Both squarely inside the range
 published in the transit capitalization literature.
 
-![Capitol Hill land-value facets, TY2013 through TY2023](/assets/light-rail/event_facets_capitol_hill_land.png)
+![Capitol Hill land-value facets, TY2013 through TY2023](/assets/light_rail/event_facets_capitol_hill_land.png)
 
 The TY2013 and TY2016 panels are the pre-period. There's a clear standing
 gradient — Broadway and the Pike-Pine corridor on the east side of the
@@ -101,7 +101,7 @@ regression identifies is the *change* in that gradient after 2017.
 The TY2017–2023 sequence shows red filling in inside the 0.5 km ring as
 the post-treatment years progress, while the doughnut stays roughly white.
 By TY2023 the differential has spread well across the treated walkshed.
-([See the year-by-year animation](/assets/light-rail/event_map_capitol_hill_land.gif).)
+([See the year-by-year animation](/assets/light_rail/event_map_capitol_hill_land.gif).)
 
 ### The falsification test
 
