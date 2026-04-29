@@ -149,14 +149,14 @@ The decomposition tells a different story than Capitol Hill, though:
 | Improvement value    | +29.7%  |
 | Total assessed value | +5.2%   |
 
-![UW Station land-value facets, TY2013 through TY2023](/assets/light-rail/event_facets_university_of_washington_land.png)
+![UW Station land-value facets, TY2013 through TY2023](/assets/light_rail/event_facets_university_of_washington_land.png)
 
 The figure makes the small-N issue visible immediately. Most of the area
 inside the rings is empty — campus, the hospital footprint, Lake
 Washington and Portage Bay to the south. The handful of residential
 parcels that do sit inside the treated walkshed don't show a coherent
 post-2017 shift. Land down, improvements up — the opposite of amenity
-capitalization. ([Animation here](/assets/light-rail/event_map_university_of_washington_land.gif).)
+capitalization. ([Animation here](/assets/light_rail/event_map_university_of_washington_land.gif).)
 
 The most plausible explanation is the UW building boom that ran through
 the late 2010s — new dorms, hospital expansion, lab buildings — all of
@@ -199,31 +199,31 @@ total assessed value at the parcel ID may also rise dramatically because a
 duplex turned into a 60-unit building. I'm measuring assessor mechanics,
 not capitalization.
 
-![U-District land-value facets, TY2018 through TY2026](/assets/light-rail/event_facets_u_district_land.png)
+![U-District land-value facets, TY2018 through TY2026](/assets/light_rail/event_facets_u_district_land.png)
 
 The figure makes the issue visible — you can see individual parcels
 flipping abruptly between frames as the assessor reclassifies them, in a
 way that doesn't happen at Capitol Hill or UW. That's not a market
 process. That's bookkeeping. ([Animation
-here](/assets/light-rail/event_map_u_district_land.gif).)
+here](/assets/light_rail/event_map_u_district_land.gif).)
 
 ### Roosevelt and Northgate proper
 
-![Roosevelt land-value facets, TY2018 through TY2026](/assets/light-rail/event_facets_roosevelt_land.png)
+![Roosevelt land-value facets, TY2018 through TY2026](/assets/light_rail/event_facets_roosevelt_land.png)
 
 Roosevelt is closer to a real result, but with both land and improvements
 moving down together it's hard to separate a station effect from the macro
 shock that hit transit-oriented neighborhoods harder than the rest of the
 city in 2022.
-([Animation here](/assets/light-rail/event_map_roosevelt_land.gif).)
+([Animation here](/assets/light_rail/event_map_roosevelt_land.gif).)
 
-![Northgate land-value facets, TY2018 through TY2026](/assets/light-rail/event_facets_northgate_land.png)
+![Northgate land-value facets, TY2018 through TY2026](/assets/light_rail/event_facets_northgate_land.png)
 
 Northgate proper is null, with wide error bars and only 55 treated parcels.
 The small sample reflects the underlying geography: the mall, the transit
 center, Sound Transit's own redevelopment site, and I-5 immediately to the
 west together swallow most of what would otherwise be the residential
-walkshed. ([Animation here](/assets/light-rail/event_map_northgate_land.gif).)
+walkshed. ([Animation here](/assets/light_rail/event_map_northgate_land.gif).)
 
 The honest answer for this cohort is "ask me again in 2030, with five more
 years of data and ideally with sales records."
