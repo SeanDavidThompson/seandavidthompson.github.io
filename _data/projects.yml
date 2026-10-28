@@ -1,3 +1,9 @@
+- title: "Seattle AV ML Forecast — October 2026 Pipeline"
+  description: "Updated parcel-level LightGBM assessed value pipeline used for the October 2026 forecast."
+  post_url: ""
+  github_url: "https://github.com/SeanDavidThompson/Seattle-AV-ML-Forecast-October"
+  tags: [machine learning, LightGBM, R, forecasting, property tax]
+
 - title: "Forecasting Seattle Property Assessed Values with LightGBM"
   description: "A parcel-level LightGBM pipeline for forecasting Seattle property assessed values, built to support city budget and revenue planning."
   post_url: "https://theresiduals.io/forecasting-assessed-values-ml"
@@ -8,4 +14,4 @@
   description: "How do you build a credible multi-year forecast for a metropolitan housing market that went through a once-in-a-generation structural shock?"
   post_url: "https://theresiduals.io/forecasting-seattle-housing-nwmls"
   github_url: ""
-  tags: [econometrics, housing, forecasting, Seattle, ARDL, VECM] 
+  tags: [econometrics, housing, forecasting, Seattle, ARDL, VECM]
